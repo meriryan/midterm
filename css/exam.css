@@ -1,2 +1,61 @@
 /* The first line of your stylesheet **must** be your first name and your GSI. Add your name and GSI's name as a comment! */
 
+/* Meri McGinnis - GSI Kyle */
+
+.skip {
+    position: absolute;
+    top: -40px;
+    left: 8px;
+    height: 40px;
+    background-color: pink;
+    z-index: 1000;
+}
+
+.skip:focus{
+    top: 25px;
+}
+
+main>div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: lightgray;
+    justify-items: end;
+    justify-content: space-evenly;
+}
+
+.gallery img {
+    width: 45%;
+    border: double black 5px;
+    margin: 15px 15px 0px 0px;
+}
+
+.gallery img:last-child {
+    width: 80%;
+    border: double black 5px;
+    grid-column: 1 / -1;
+}
+
+.gallery :nth-child(2) {
+    height: 90%;
+    border: double black 5px;
+}
+
+@media only screen and (min-width: 545px) {
+    main>div {
+        background-color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery img {
+        width: 55%;
+    }
+
+    .gallery img:nth-child(odd){
+        border: purple dashed 13px;
+    }
+
+
+
+}
+

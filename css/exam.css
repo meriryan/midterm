@@ -44,18 +44,69 @@ main>div {
     main>div {
         background-color: black;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .gallery img {
         width: 55%;
+        align-content: space-between;
     }
 
     .gallery img:nth-child(odd){
         border: purple dashed 13px;
+        justify-content: space-around;
     }
 
+    .gallery img:nth-child(even){
+        height: auto;
+        grid-column-end: -1;
+        border: orange dotted 12px;
+        justify-content: space-around;
+    }
 
-
+    .gallery img:last-child {
+        width: 25%;
+        grid-column-end: -1;
+        border: orange dotted 12px;
+    }
 }
 
+@media only screen and (min-width: 775px) {
+    main>div {
+        background-color: orange;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .gallery img {
+        width: 65%;
+        border: black dotted 7px;
+    }
+
+    .gallery img:nth-child(odd){
+        justify-content: space-around;
+        border: black dotted 7px;
+    }
+
+    .gallery img:nth-child(even){
+        height: auto;
+        grid-column-end: -1;
+        justify-content: space-around;
+        border: black dotted 7px;
+    }
+
+    .gallery img:last-child {
+        grid-column-end: -1;
+        border: black dotted 7px;
+    }
+
+    .gallery img:nth-child(3n){
+        grid-column: 1 / -1;
+    }
+
+    .gallery img:hover {
+    border: blue dotted 7px;
+
+    }
+
+}
